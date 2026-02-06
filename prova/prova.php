@@ -1,7 +1,7 @@
 <?php
 
 class Produto {
-    public string $nome;
+    private string $nome;
     public float $preco;
     public int $estoque;
 
@@ -57,7 +57,7 @@ class ItemPedido {
 class Pedido {
     public Cliente $cliente;
     public array $itens = [];
-    public float $total = 0;
+    protected float $total = 0;
     public string $status = "Aberto";
 
     public function __construct(Cliente $cliente) {
